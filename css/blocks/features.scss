@@ -1,0 +1,26 @@
+.features {
+  background: url('../img/bg/best.png') center center / cover no-repeat;
+}
+
+.features__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features__item {
+  width: calc(100% / 3 - 26px);
+}
+
+.feature__title {
+  font-size: 24px;
+  font-family: 'Lifehack-Medium';
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.feature__text {
+  font-size: 14px;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  color: #82807f;
+}
