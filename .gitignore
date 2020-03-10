@@ -1,8 +1,2 @@
 .vscode/
-.sass-cache/
 prepros.cfg
-img/
-css/main.map.css
-css/vendors.min.css
-node_modules
-.DS_Store
