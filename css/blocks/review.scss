@@ -6,8 +6,6 @@
   &:hover {
     .review__hover {
       opacity: 1;
-      transform: scale(1);
-      padding: 45px 20px;
       background: rgba(20, 20, 20, .7);
     }
   }
@@ -35,7 +33,7 @@
   right: 0; 
   bottom: 0;
   opacity: 0;
-  transform: scale(.8);
+  padding: 45px 20px;
   transition: .3s;
 }
 

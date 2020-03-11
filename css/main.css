@@ -542,7 +542,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   min-height: 650px;
 }
 .section--align--top {
@@ -561,6 +561,10 @@ img {
 }
 .section__title--color--black {
   color: #2f3234;
+}
+
+.order__title {
+  color: white;
 }
 
 .header {
@@ -660,6 +664,9 @@ img {
 .btn--margin0 {
   margin: 0;
 }
+.btn--dark {
+  background-color: #2f3234;
+}
 
 .scroll-down {
   position: absolute;
@@ -668,6 +675,7 @@ img {
   transform: translateX(-50%);
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .features {
@@ -732,8 +740,6 @@ img {
 }
 .review:hover .review__hover {
   opacity: 1;
-  transform: scale(1);
-  padding: 45px 20px;
   background: rgba(20, 20, 20, 0.7);
 }
 
@@ -759,7 +765,7 @@ img {
   right: 0;
   bottom: 0;
   opacity: 0;
-  transform: scale(0.8);
+  padding: 45px 20px;
   transition: 0.3s;
 }
 
