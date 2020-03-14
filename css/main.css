@@ -542,7 +542,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
   min-height: 650px;
 }
 .section--align--top {
@@ -561,10 +561,6 @@ img {
 }
 .section__title--color--black {
   color: #2f3234;
-}
-
-.order__title {
-  color: white;
 }
 
 .header {
@@ -660,6 +656,7 @@ img {
   margin-left: 15px;
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: 500;
+  color: white;
 }
 .btn--margin0 {
   margin: 0;
@@ -781,6 +778,11 @@ img {
   line-height: 1.7;
 }
 
+.order {
+  display: flex;
+  justify-content: space-between;
+}
+
 .order-section {
   background: url("../img/bg/order.png") center center/cover no-repeat;
 }
@@ -800,6 +802,8 @@ img {
 
 .order__title {
   margin-bottom: 5px;
+  color: white;
+  font-size: 14px;
 }
 
 .order__input {
@@ -807,4 +811,92 @@ img {
   padding: 8px 21px;
   border: none;
   border-radius: 4px;
+}
+.order__input--textarea {
+  resize: none;
+  height: 108px;
+}
+
+.order__left {
+  margin-right: 20px;
+  flex: 1;
+}
+
+.order__right {
+  flex: 1;
+}
+
+.order__buttons-row {
+  margin-bottom: 27px;
+}
+
+.order__form-button {
+  margin-right: 20px;
+  border: 0;
+  background: #e35028;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.order__form-button_reset {
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: none;
+  background: transparent;
+}
+
+.switch-controls__buttons {
+  display: flex;
+}
+.switch-controls__elem {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+.switch-controls__elem-title {
+  color: white;
+  font-size: 14px;
+}
+.switch-controls__radio {
+  display: none;
+}
+.switch-controls__radio-fake {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: solid 1px #c8c8c8;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+}
+.switch-controls__radio-fake::after {
+  content: " ";
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  background-color: #e35028;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.switch-controls__radio:checked ~ .switch-controls__radio-fake:after {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+}
+
+.checkbox {
+  color: #e45028;
+  cursor: pointer;
+  border: none;
+  background-color: white;
 }
