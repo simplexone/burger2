@@ -713,6 +713,97 @@ img {
   max-height: 78px;
 }
 
+.team {
+  background: url("../../img/bg/team.png") 50% no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+.team .section__title {
+  margin-bottom: 15%;
+}
+.team-acco__item {
+  margin-bottom: 40px;
+}
+.team-acco__item:last-child {
+  margin-bottom: 0;
+}
+.team-acco__item.is-active .team-acco__trigger {
+  color: #f9b43b;
+}
+.team-acco__item.is-active .team-acco__trigger:before {
+  transform: rotate(-180deg);
+}
+.team-acco__item.is-active .team-acco__content {
+  height: 100%;
+  overflow: initial;
+}
+.team__section {
+  width: 50%;
+  height: 100%;
+  padding: 5% 7% 0 7%;
+  background: rgba(47, 50, 52, 0.93);
+}
+.team-acco__trigger {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Gagalin-Regular", Helvetica, sans-serif;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  margin-bottom: 17px;
+}
+.team-acco__trigger:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -18px;
+  top: 8px;
+  width: 0;
+  height: 0;
+}
+.team-acco__trigger:before {
+  border-top: 7px solid #f9b43b;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 0px solid transparent;
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+.team-acco__content {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+}
+.team-acco__pic {
+  text-align: center;
+  width: 30%;
+  margin-right: 21px;
+}
+.team-acco__img {
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+.team-acco__title {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 21px;
+}
+.team-acco__text-content {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: 14px;
+}
+
 .reviews {
   background: black;
   height: 100vh;

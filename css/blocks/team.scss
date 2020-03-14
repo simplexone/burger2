@@ -1,0 +1,105 @@
+.team {
+	background: url("../../img/bg/team.png") 50% no-repeat;
+	background-size: cover;
+    display: flex;
+    align-items: flex-end;
+	.section__title {
+        margin-bottom: 15%;
+	}
+
+    &-acco__item {
+        margin-bottom: 40px;
+        
+          &:last-child {
+              margin-bottom: 0;
+          }
+      
+          &.is-active {
+              .team-acco__trigger {
+                  color: $yellow;
+      
+                  &:before {
+                      transform: rotate(-180deg);
+                  }
+              }
+              .team-acco__content {
+                  height: 100%;
+                  overflow: initial;
+              }
+          }
+      }
+
+    &__section {
+        width: 50%;
+        height: 100%;
+        padding: 5% 7% 0 7%;
+        background: rgba(47, 50, 52, .93);
+    }
+    
+    &-acco__trigger {
+        color: #fff;
+	    font-size: 14px;
+	    @include gagalin;
+	    text-decoration: none;
+	    position: relative;
+        display: block;
+        margin-bottom: 17px;
+        
+        &:before  {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -18px;
+            top: 8px;
+            width: 0;
+            height: 0;
+        }
+    
+        &:before {
+            border-top: 7px solid $yellow;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 0px solid transparent;
+            transform: rotate(0deg);
+            transition: .3s;
+        }
+    
+
+    }
+
+
+    &-acco__content {
+        display: flex;
+        height: 0;
+        overflow: hidden;
+    }
+
+    &-acco__pic {
+        text-align: center;
+        width: 30%;
+        margin-right: 21px;
+    }
+
+    &-acco__img {
+        @include inlineblock();
+        width: 100px;
+        height: 100px;
+        @include cover;
+        border-radius: 50%;
+    }
+    
+    &-acco__title {
+        @include ubuntu(bold);
+	    font-size: 14px;
+        color: #fff;
+        margin-bottom: 21px;
+    }
+
+    &-acco__text-content {
+        @include ubuntu(light);
+	    color: #fff;
+        font-size: 14px;
+    }
+}
+
+
