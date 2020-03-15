@@ -8,13 +8,13 @@
 }
 
 .order__row {
-  margin-bottom: 14px;
+  margin-bottom: rem(14px);
   display: flex;
 }
 
 .order__block {
   flex: 1;
-  margin-right: 20px;
+  margin-right: rem(20px);
 
   &:last-child {
     margin-right: 0;
@@ -22,25 +22,25 @@
 }
 
 .order__title {
-  margin-bottom: 5px;
+  margin-bottom: rem(5px);
   color: white;
-  font-size: 14px;
+  font-size: rem(14px);
 }
 
 .order__input {
   width: 100%;
-  padding: 8px 21px;
+  padding: rem(8px) rem(21px);
   border: none;
   border-radius: 4px;
 
   &--textarea {
     resize: none;
-    height: 108px;
+    height: rem(108px);
   }
 }
 
 .order__left {
-  margin-right: 20px;
+  margin-right: rem(20px);
   flex: 1;
 }
 
@@ -49,18 +49,18 @@
 }
 
 .order__buttons-row {
-  margin-bottom: 27px;
+  margin-bottom: rem(27px);
 }
 
 .order__form-button {
-  margin-right: 20px;
+  margin-right: rem(20px);
   border: 0;
   background: $red;
-  font-size: 13px;
+  font-size: rem(13px);
   text-transform: uppercase;
   border-radius: 5px;
   color: #ffffff;
-  padding: 10px 15px;
+  padding: rem(10px) rem(15px);
   cursor: pointer;
 }
 

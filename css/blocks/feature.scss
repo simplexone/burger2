@@ -5,6 +5,6 @@
 .feature__img {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
-  max-height: 78px;
+  margin-bottom: rem(30px);
+  max-height: rem(78px);
 }

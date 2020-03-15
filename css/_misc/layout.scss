@@ -1,10 +1,11 @@
 html,
 body {
   height: 100%;
+  // overflow-x: hidden;
 }
 
 body {
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,13 +17,13 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 940px + 20px;
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: 940px;
+  max-width: rem(940px);
+  width: 95%;
   margin: 0 auto;
 }
 

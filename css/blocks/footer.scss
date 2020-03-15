@@ -8,26 +8,26 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 0;
+  padding: rem(10px) 0;
 
 }
 
 .footer__col {
 	width: 50%;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
 
 }
 
 .footer__address {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: rem(14px);
 }
 
 .footer__phone {
 	color: $red;
 	@include ubuntu(bold);
 	text-decoration: none;
-	font-size: 14px;
+	font-size: rem(14px);
 }
 
 .footer__col_right {

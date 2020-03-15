@@ -6,13 +6,13 @@
 
     &__elem {
         display: flex;
-        margin-right: 20px;
+        margin-right: rem(20px);
         align-items: center;
     }
 
     &__elem-title {
         color: white;
-        font-size: 14px;
+        font-size: rem(14px);
     }
 
     &__radio {
@@ -27,7 +27,7 @@
         border: solid 1px #c8c8c8;
         border-radius: 50%;
         position: relative;
-        margin-right: 10px;
+        margin-right: rem(10px);
         cursor: pointer;
         border: none;
     }

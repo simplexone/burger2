@@ -477,7 +477,7 @@ body {
 }
 
 body {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -490,13 +490,13 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 960px;
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: 940px;
+  max-width: 58.75rem;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -551,16 +551,16 @@ img {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
 }
 .section--align--top {
   justify-content: flex-start;
 }
 
 .section__title {
-  font-size: 72px;
+  font-size: 4.5rem;
   color: #f9b43b;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
   font-family: "Gagalin-Regular", Helvetica, sans-serif;
   line-height: 1;
 }
@@ -601,17 +601,17 @@ img {
   height: 4px;
   border-radius: 50%;
   background: currentColor;
-  margin-left: 13px;
+  margin-left: 0.8125rem;
 }
 .menu__item:first-child:before {
   display: none;
 }
 
 .menu__link {
-  margin-left: 13px;
+  margin-left: 0.8125rem;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .hero {
@@ -627,13 +627,13 @@ img {
 }
 
 .menu__link {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: bold;
 }
 
 .hero__desc {
-  font-size: 65px;
+  font-size: 4.0625rem;
   font-family: "Lifehack-Medium";
   line-height: 1.1;
 }
@@ -642,13 +642,13 @@ img {
   display: flex;
   align-items: center;
   flex: 0.8;
-  margin-left: 15px;
+  margin-left: 0.9375rem;
 }
 
 .hero__text {
   width: 50%;
-  padding-top: 94px;
-  margin-left: 11px;
+  padding-top: 5.875rem;
+  margin-left: 0.6875rem;
 }
 
 .hero__image {
@@ -656,15 +656,15 @@ img {
 }
 
 .btn {
-  font-size: 13px;
+  font-size: 0.8125rem;
   background: #e35028;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   display: inline-block;
-  padding: 10px 15px;
-  margin-left: 15px;
+  padding: 0.625rem 0.9375rem;
+  margin-left: 0.9375rem;
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: 500;
   color: white;
@@ -678,7 +678,7 @@ img {
 
 .scroll-down {
   position: absolute;
-  bottom: 40px;
+  bottom: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
   background: none;
@@ -700,14 +700,14 @@ img {
 }
 
 .feature__title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Lifehack-Medium";
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 1.125rem;
 }
 
 .feature__text {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Ubuntu";
   font-weight: 300;
   color: #82807f;
@@ -720,8 +720,8 @@ img {
 .feature__img {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
-  max-height: 78px;
+  margin-bottom: 1.875rem;
+  max-height: 4.875rem;
 }
 
 .team {
@@ -734,7 +734,7 @@ img {
   margin-bottom: 15%;
 }
 .team-acco__item {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 .team-acco__item:last-child {
   margin-bottom: 0;
@@ -757,27 +757,27 @@ img {
 }
 .team-acco__trigger {
   color: #fff;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Gagalin-Regular", Helvetica, sans-serif;
   text-decoration: none;
   position: relative;
   display: block;
-  margin-bottom: 17px;
+  margin-bottom: 1.0625rem;
 }
 .team-acco__trigger:before {
   content: "";
   display: block;
   position: absolute;
-  left: -18px;
-  top: 8px;
+  left: -1.125rem;
+  top: 0.5rem;
   width: 0;
   height: 0;
 }
 .team-acco__trigger:before {
-  border-top: 7px solid #f9b43b;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 0px solid transparent;
+  border-top: 0.4375rem solid #f9b43b;
+  border-left: 0.3125rem solid transparent;
+  border-right: 0.3125rem solid transparent;
+  border-bottom: 0rem solid transparent;
   transform: rotate(0deg);
   transition: 0.3s;
 }
@@ -789,13 +789,13 @@ img {
 .team-acco__pic {
   text-align: center;
   width: 30%;
-  margin-right: 21px;
+  margin-right: 1.3125rem;
 }
 .team-acco__img {
   display: inline-block;
   vertical-align: top;
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -804,15 +804,15 @@ img {
 .team-acco__title {
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #fff;
-  margin-bottom: 21px;
+  margin-bottom: 1.3125rem;
 }
 .team-acco__text-content {
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: 300;
   color: #fff;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .menu-burger {
@@ -842,9 +842,9 @@ img {
   color: #f9b43b;
 }
 .menu-acco__item.is-active .menu-acco__content {
-  width: 540px;
+  width: 33.75rem;
   overflow: initial;
-  padding: 60px 30px;
+  padding: 3.75rem 1.875rem;
 }
 .menu-acco__item.is-active .menu-acco__text {
   width: 100%;
@@ -852,7 +852,7 @@ img {
 }
 
 .menu-acco__trigger {
-  width: 80px;
+  width: 5rem;
   display: block;
   height: 100%;
   float: left;
@@ -864,7 +864,7 @@ img {
 }
 
 .menu-acco__trigger-text {
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #fff;
   font-family: "Gagalin-Regular", Helvetica, sans-serif;
   text-align: center;
@@ -874,7 +874,7 @@ img {
   transform-origin: 0 0;
   left: 50%;
   top: 100%;
-  margin-top: -20px;
+  margin-top: -1.25rem;
 }
 
 .menu-acco__content {
@@ -888,7 +888,7 @@ img {
 .menu-acco__text {
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #fff;
   width: 100%;
   line-height: 1.8;
@@ -898,7 +898,7 @@ img {
 .reviews {
   background: black;
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
 }
 
 .reviews__list {
@@ -944,19 +944,19 @@ img {
   right: 0;
   bottom: 0;
   opacity: 0;
-  padding: 45px 20px;
+  padding: 2.8125rem 1.25rem;
   transition: 0.3s;
 }
 
 .review__username {
   font-family: "Gagalin-Regular", Helvetica, sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   line-height: 2;
 }
 
 .review__content {
-  font-size: 14px;
-  margin-bottom: 17px;
+  font-size: 0.875rem;
+  margin-bottom: 1.0625rem;
   line-height: 1.7;
 }
 
@@ -970,37 +970,37 @@ img {
 }
 
 .order__row {
-  margin-bottom: 14px;
+  margin-bottom: 0.875rem;
   display: flex;
 }
 
 .order__block {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 .order__block:last-child {
   margin-right: 0;
 }
 
 .order__title {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .order__input {
   width: 100%;
-  padding: 8px 21px;
+  padding: 0.5rem 1.3125rem;
   border: none;
   border-radius: 4px;
 }
 .order__input--textarea {
   resize: none;
-  height: 108px;
+  height: 6.75rem;
 }
 
 .order__left {
-  margin-right: 20px;
+  margin-right: 1.25rem;
   flex: 1;
 }
 
@@ -1009,18 +1009,18 @@ img {
 }
 
 .order__buttons-row {
-  margin-bottom: 27px;
+  margin-bottom: 1.6875rem;
 }
 
 .order__form-button {
-  margin-right: 20px;
+  margin-right: 1.25rem;
   border: 0;
   background: #e35028;
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   border-radius: 5px;
   color: #ffffff;
-  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
   cursor: pointer;
 }
 
@@ -1036,12 +1036,12 @@ img {
 }
 .switch-controls__elem {
   display: flex;
-  margin-right: 20px;
+  margin-right: 1.25rem;
   align-items: center;
 }
 .switch-controls__elem-title {
   color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .switch-controls__radio {
   display: none;
@@ -1054,7 +1054,7 @@ img {
   border: solid 1px #c8c8c8;
   border-radius: 50%;
   position: relative;
-  margin-right: 10px;
+  margin-right: 0.625rem;
   cursor: pointer;
   border: none;
 }
@@ -1107,17 +1107,17 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 0;
+  padding: 0.625rem 0;
 }
 
 .footer__col {
   width: 50%;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 .footer__address {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .footer__phone {
@@ -1125,7 +1125,7 @@ img {
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: bold;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .footer__col_right {
@@ -1141,7 +1141,7 @@ img {
 }
 
 .socials__item {
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 
 .socials__link {

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 
   &--align--top {
     justify-content: flex-start;
@@ -11,9 +11,9 @@
 }
 
 .section__title {
-  font-size: 72px; 
+  font-size: rem(72px); 
   color: $yellow;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
   @include gagalin();
   line-height: 1;
 
