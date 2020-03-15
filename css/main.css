@@ -433,6 +433,14 @@ template {
   display: none;
 }
 
+.menu-acco:before, .menu-acco:after {
+  content: "";
+  display: table;
+}
+.menu-acco:after {
+  clear: both;
+}
+
 @font-face {
   font-family: "Gagalin-Regular";
   src: url("../fonts/Gagalin-Regular.woff") format("woff");
@@ -561,6 +569,9 @@ img {
 }
 .section__title--color--black {
   color: #2f3234;
+}
+.section__title--white {
+  color: #fff;
 }
 
 .header {
@@ -802,6 +813,86 @@ img {
   font-weight: 300;
   color: #fff;
   font-size: 14px;
+}
+
+.menu-burger {
+  background: url("../../img/bg/menu.png") 50% no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.menu__title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.menu-acco {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.menu-acco__item {
+  float: left;
+  height: 100%;
+}
+.menu-acco__item.is-active .menu-acco__trigger-text {
+  color: #f9b43b;
+}
+.menu-acco__item.is-active .menu-acco__content {
+  width: 540px;
+  overflow: initial;
+  padding: 60px 30px;
+}
+.menu-acco__item.is-active .menu-acco__text {
+  width: 100%;
+  display: initial;
+}
+
+.menu-acco__trigger {
+  width: 80px;
+  display: block;
+  height: 100%;
+  float: left;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  position: relative;
+}
+
+.menu-acco__trigger-text {
+  font-size: 40px;
+  color: #fff;
+  font-family: "Gagalin-Regular", Helvetica, sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: -20px;
+}
+
+.menu-acco__content {
+  height: 100%;
+  float: left;
+  background: rgba(47, 50, 52, 0.93);
+  width: 0;
+  overflow: hidden;
+}
+
+.menu-acco__text {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+  line-height: 1.8;
+  display: none;
 }
 
 .reviews {
