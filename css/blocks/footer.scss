@@ -1,7 +1,7 @@
 .footer {
 	background: url('../../img/bg/footer2.png') center bottom no-repeat;
     background-size: cover;
-    height: 7%;
+    min-height: 7%;
 }
 
 .footer__container {
@@ -10,12 +10,19 @@
   align-items: center;
   padding: rem(10px) 0;
 
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .footer__col {
 	width: 50%;
     margin-bottom: rem(15px);
 
+    @include phones {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .footer__address {

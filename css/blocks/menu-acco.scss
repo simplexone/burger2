@@ -23,6 +23,10 @@
 			@include tablets {
 				width: rem(511px);
 			}
+			
+			@include phones {
+				width: rem(305px);
+			}
         }
 
         .menu-acco__text {

@@ -5,10 +5,25 @@
 .features__list {
   display: flex;
   justify-content: space-between;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
+
 .features__item {
-  width: calc(100% / 3 - 26px);
+  margin-bottom: rem(50px);
+  padding: 0 rem(15px);
+  display: flex;
+  flex-direction: column;
+  
+  @include phones {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: rem(25px);
+  }
+
 }
 
 .feature__title {
@@ -23,4 +38,19 @@
   font-family: 'Ubuntu';
   font-weight: 300;
   color: #82807f;
+}
+
+.feature__content {
+  @include phones {
+    text-align: left;
+    display: block;
+    width: 65%;
+  }
+}
+
+.feature__img {
+  @include phones {
+    margin-right: rem(20px);
+    width: 24%;
+  }
 }
