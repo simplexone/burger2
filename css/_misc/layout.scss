@@ -2,6 +2,10 @@ html,
 body {
   height: 100%;
   // overflow-x: hidden;
+
+  @include tablets {
+    font-size: rem(15px);
+  }
 }
 
 body {

@@ -1,6 +1,11 @@
 .order {
   display: flex;
   justify-content: space-between;
+
+  @include tablets {
+    flex-direction: column;
+    padding: 0 19%;
+  }
 }
 
 .order-section {
@@ -42,6 +47,10 @@
 .order__left {
   margin-right: rem(20px);
   flex: 1;
+
+  @include tablets{
+    margin-right: 0;
+  }
 }
 
 .order__right {

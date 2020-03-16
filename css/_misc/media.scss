@@ -2,4 +2,27 @@
   @return $px / 16px + 0rem;
 }
 
+@mixin laptop {
+	@media screen and (max-width: $laptop) {
+		@content;
+	}
+}
+
+@mixin tablets {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin phones {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin iPhone6 {
+	@media screen and (max-width: 414px) {
+		@content;
+	}
+}
 

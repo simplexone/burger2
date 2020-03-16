@@ -18,7 +18,11 @@
         .menu-acco__content {
             width: rem(540px);
             overflow: initial;
-            padding: rem(60px) rem(30px);
+			padding: rem(60px) rem(30px);
+			
+			@include tablets {
+				width: rem(511px);
+			}
         }
 
         .menu-acco__text {

@@ -2,6 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__btns {
@@ -9,3 +14,8 @@
   align-items: center;
 }
 
+.menu {
+  @include tablets {
+    display: none;
+  }
+}

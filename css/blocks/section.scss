@@ -28,4 +28,8 @@
   &--white {
     color: #fff;
   }
+
+  @include iPhone6 {
+    font-size: rem(55px);
+  }
 }

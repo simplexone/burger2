@@ -33,14 +33,23 @@
   right: 0; 
   bottom: 0;
   opacity: 0;
-  padding: rem(45px) rem(20px);
+  padding: 17% 7% 0;
   transition: .3s;
+
+  @include tablets {
+    padding-top: 5%;
+    text-align: center;
+  }
 }
 
 .review__username{
   font-family: 'Gagalin-Regular', Helvetica, sans-serif;
   margin-bottom: rem(30px);
   line-height: 2;
+
+  @include tablets {
+    margin-bottom: rem(17px);
+  }
 }
 
 .review__content {

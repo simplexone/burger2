@@ -25,6 +25,13 @@
               .team-acco__content {
                   height: 100%;
                   overflow: initial;
+
+                  @include tablets {
+                      flex-direction: column;
+                      align-items: center;
+                      text-align: center;
+                      padding: 0 24%;
+                  }
               }
           }
       }
@@ -34,6 +41,11 @@
         height: 100%;
         padding: 5% 7% 0 7%;
         background: rgba(47, 50, 52, .93);
+
+        @include tablets {
+            width: 100%;
+            text-align: center;
+        }
     }
     
     &-acco__trigger {
@@ -44,6 +56,10 @@
 	    position: relative;
         display: block;
         margin-bottom: rem(17px);
+
+        @include tablets {
+            display: inline-flex;
+        }
         
         &:before  {
             content: "";
@@ -78,6 +94,11 @@
         text-align: center;
         width: 30%;
         margin-right: rem(21px);
+        
+        @include tablets {
+            margin-right: 0;
+            margin-bottom: rem(18px);
+        }
     }
 
     &-acco__img {
