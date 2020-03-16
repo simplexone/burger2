@@ -27,6 +27,11 @@
 			@include phones {
 				width: rem(305px);
 			}
+			
+			@include iPhone5 {
+				width: rem(220px);
+				padding: 10% 5%;
+			}
         }
 
         .menu-acco__text {
@@ -44,8 +49,12 @@
 	float: left;
 	@include cover;
 	text-decoration: none;
-    position: relative;
-  
+	position: relative;
+
+	@include iPhone5 {
+		width: rem(50px);
+	}
+	
 }
 
 .menu-acco__trigger-text {

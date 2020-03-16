@@ -487,6 +487,12 @@ body {
     font-size: 0.875rem;
   }
 }
+@media screen and (max-width: 414px) {
+  html,
+body {
+    font-size: 0.8125rem;
+  }
+}
 
 body {
   font-size: 1rem;
@@ -997,6 +1003,12 @@ img {
     width: 19.0625rem;
   }
 }
+@media screen and (max-width: 414px) {
+  .menu-acco__item.is-active .menu-acco__content {
+    width: 13.75rem;
+    padding: 10% 5%;
+  }
+}
 .menu-acco__item.is-active .menu-acco__text {
   width: 100%;
   display: initial;
@@ -1012,6 +1024,11 @@ img {
   background-repeat: no-repeat;
   text-decoration: none;
   position: relative;
+}
+@media screen and (max-width: 414px) {
+  .menu-acco__trigger {
+    width: 3.125rem;
+  }
 }
 
 .menu-acco__trigger-text {

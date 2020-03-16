@@ -10,6 +10,10 @@ body {
   @include phones {
     font-size: rem(14px);
   }
+  
+  @include iPhone5 {
+    font-size: rem(13px);
+  }
 }
 
 body {
