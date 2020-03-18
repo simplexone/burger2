@@ -1328,17 +1328,35 @@ img {
   left: -624.9375rem;
 }
 
+.checkbox {
+  cursor: pointer;
+  border-radius: 0rem;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: solid 1px #c8c8c8;
+  position: relative;
+  margin-right: 0.625rem;
+  border: none;
+}
+.checkbox::after {
+  content: " ";
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .switch-controls__checkbox:checked ~ .checkbox::after {
   background: url("../../img/icons/check.png");
   background-size: contain;
   width: 0.6875rem;
   height: 0.5625rem;
   transition: 0.3s;
-}
-
-.checkbox {
-  cursor: pointer;
-  border-radius: 0rem;
 }
 
 .map {

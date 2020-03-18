@@ -59,11 +59,3 @@
     top: 0;
     left: -624.9375rem;
 }
-
-.switch-controls__checkbox:checked ~ .checkbox::after{
-    background: url("../../img/icons/check.png");
-    background-size: contain;
-    width: rem(11px);
-    height: rem(9px);
-    transition: .3s;
-}
