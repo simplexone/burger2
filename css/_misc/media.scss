@@ -27,7 +27,7 @@
 }
 
 @mixin iPhone5 {
-	@media screen and (max-width: 414px) {
+	@media screen and (max-width: 320px) {
 		@content;
 	}
 }

@@ -1,5 +1,5 @@
 .team {
-	background: url("../../img/bg/team.png") 50% no-repeat;
+	background: url("../img/bg/team.png") 50% no-repeat;
 	background-size: cover;
     display: flex;
     align-items: flex-end;
@@ -56,6 +56,10 @@
 	    position: relative;
         display: block;
         margin-bottom: rem(17px);
+
+        @include iPhone6 {
+            font-size: 1.275rem;
+        }
 
         @include tablets {
             display: inline-flex;

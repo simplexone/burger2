@@ -487,7 +487,7 @@ body {
     font-size: 0.875rem;
   }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 320px) {
   html,
 body {
     font-size: 0.8125rem;
@@ -848,7 +848,7 @@ img {
 }
 
 .team {
-  background: url("../../img/bg/team.png") 50% no-repeat;
+  background: url("../img/bg/team.png") 50% no-repeat;
   background-size: cover;
   display: flex;
   align-items: flex-end;
@@ -900,6 +900,11 @@ img {
   position: relative;
   display: block;
   margin-bottom: 1.0625rem;
+}
+@media screen and (max-width: 414px) {
+  .team-acco__trigger {
+    font-size: 1.275rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .team-acco__trigger {
@@ -963,7 +968,7 @@ img {
 }
 
 .menu-burger {
-  background: url("../../img/bg/menu.png") 50% no-repeat;
+  background: url("../img/bg/menu.png") 50% no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1003,7 +1008,7 @@ img {
     width: 19.0625rem;
   }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 320px) {
   .menu-acco__item.is-active .menu-acco__content {
     width: 13.75rem;
     padding: 10% 5%;
@@ -1025,7 +1030,7 @@ img {
   text-decoration: none;
   position: relative;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 320px) {
   .menu-acco__trigger {
     width: 3.125rem;
   }
@@ -1205,7 +1210,7 @@ img {
 
 .order__input {
   width: 100%;
-  padding: 0.5rem 1.3125rem;
+  padding: 0.5rem 0.5rem;
   border: none;
   border-radius: 4px;
 }
@@ -1269,6 +1274,9 @@ img {
   min-width: 5.3125rem;
 }
 
+.switch-controls {
+  position: relative;
+}
 .switch-controls__buttons {
   display: flex;
 }
@@ -1286,8 +1294,8 @@ img {
 }
 .switch-controls__radio-fake {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   background: white;
   border: solid 1px #c8c8c8;
   border-radius: 50%;
@@ -1309,16 +1317,28 @@ img {
 }
 
 .switch-controls__radio:checked ~ .switch-controls__radio-fake:after {
-  height: 7px;
-  width: 7px;
+  height: 8px;
+  width: 8px;
   border-radius: 50%;
 }
 
+.switch-controls__checkbox {
+  position: absolute;
+  top: 0;
+  left: -624.9375rem;
+}
+
+.switch-controls__checkbox:checked ~ .checkbox::after {
+  background: url("../../img/icons/check.png");
+  background-size: contain;
+  width: 0.6875rem;
+  height: 0.5625rem;
+  transition: 0.3s;
+}
+
 .checkbox {
-  color: #e45028;
   cursor: pointer;
-  border: none;
-  background-color: white;
+  border-radius: 0rem;
 }
 
 .map {
@@ -1333,10 +1353,11 @@ img {
 .yandex-map {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .footer {
-  background: url("../../img/bg/footer2.png") center bottom no-repeat;
+  background: url("../img/bg/footer2.png") center bottom no-repeat;
   background-size: cover;
   min-height: 7%;
 }
