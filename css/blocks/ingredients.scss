@@ -1,0 +1,68 @@
+.ingredients {
+    position: absolute;
+    top: 0;
+    background-color: rgba(227, 80, 40, .3);
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: rem(5px);
+    
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: rgba(227, 80, 40, 1);
+        transition: 1s;
+        .ingredients__dropdown{
+            left: 100%;
+            opacity: 1;
+            transition: opacity .7s;
+        }
+    }
+
+    &__pic {
+        width: rem(38px);
+        height: rem(38px);
+    }
+
+    &__text {
+        @include ubuntu($style: medium);
+        padding-left: rem(25px);
+        
+    }
+
+    &__weight {
+        @include ubuntu($style: light);
+    }
+
+    &__cel:last-child {
+        margin-left: auto;
+    }
+
+    &__icon-text {
+        font-family: 'Gagalin';
+        font-size: 14px;
+        color: white;
+    }
+
+    &__dropdown {
+        padding: rem(20px);
+        background: rgba(255, 255, 255, .9);
+        position: absolute;
+        width: rem(270px);
+        border-radius: rem(5px);
+        left: -9999px;
+        opacity: 0;
+        transition: opacity .3s;
+        z-index: 10;
+        top: 0;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}

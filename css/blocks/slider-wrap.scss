@@ -1,0 +1,72 @@
+.slider {
+    &__title {
+        color: white;
+        margin-bottom: rem(56px);
+    }
+
+    &__text {
+        font-family: 'Ubuntu';
+        font-size: 14px;
+        font-weight: 300;
+        text-align: left;
+        color: white;
+        margin-bottom: rem(34px);
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    &__pic {
+        width: 100%;
+    }
+
+    &__options {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        font-family: 'Gagalin-Regular', Helvetica, sans-serif;
+        color: #e35028;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    &__price-amount{
+        font-size: rem(72px);
+    }
+
+    &__price-measure{
+        font-size: rem(30px);
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1rem;
+        z-index: 20;
+    }
+
+    &__btn_next{
+        right: -2.5rem;
+    }
+
+    &__btn_prev{
+        left: -2.5rem;
+    }
+
+    &__button {
+        margin-left: rem(29px);
+    }
+}
+
+.slider__left,
+.slider__right {
+    flex: 1;
+}

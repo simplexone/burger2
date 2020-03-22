@@ -1,0 +1,28 @@
+.burger-weight{
+    position: absolute;
+    top: 100%;
+    opacity: .5;
+    &__measure{
+        background: url(../img/icons/kkal.svg) 50% no-repeat;
+        width: rem(65px);
+        height: rem(60px);
+        position: relative;
+    }
+
+    &__amount {
+        position: absolute;
+        bottom: rem(8px);
+        left: 52%;
+        transform: translateX(-50%);
+        color: white;
+        @include gagalin(); 
+        font-size: rem(20px);
+    }
+
+    &__title {
+        @include gagalin();
+        text-align: center;
+        color: white;
+        font-size: rem(14px);
+    }
+}
