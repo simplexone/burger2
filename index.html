@@ -45,9 +45,34 @@
             </nav>
             <div class="header__links">
               <a class="order-link btn" href="" data-scroll-to="6">Заказать</a>
-              <a class="hamburger-menu-link" href="">
-                <div class="hamburger-menu-link__bars"></div>
-              </a>
+              <div class="hamburger-menu-link " id="toggle">
+                <img class="cross " id="cross" src="./img/icons/cross.png" alt="">
+                <div class="hamburger-menu-link__bars" id="hidden"></div>
+              </div>
+            </div>
+            <div class="overlay" id="overlay">
+              <nav class="overlay-menu">
+                <ul class="overlay-menu__list">
+                  <li class="overlay-menu__item">
+                    <a class="overlay-menu__link" id="link" href="#">о нас</a>
+                  </li>
+                  <li class="overlay-menu__item">
+                    <a class="overlay-menu__link" href="#">бургеры</a>
+                  </li>
+                  <li class="overlay-menu__item">
+                    <a class="overlay-menu__link" href="#">команда</a>
+                  </li>
+                  <li class="overlay-menu__item">
+                    <a class="overlay-menu__link" href="#">меню</a>
+                  </li>
+                  <li class="overlay-menu__item">
+                    <a class="overlay-menu__link" href="#">отзывы</a>
+                  </li>
+                  <li class="overlay-menu__item">
+                    <a class="overlay-menu__link" href="#">контакты</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </header>
@@ -586,6 +611,7 @@
       </footer>
     </section>
   </div>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

@@ -12,6 +12,19 @@
     justify-content: center;
     align-items: center;
 
+    @include tablets {
+        top: inherit;
+        bottom: 100%;
+        left: 20%;
+    }
+    @include phones {
+        left: 0;
+    }
+    @include iPhone5 {
+        top: -12%;
+    }
+    
+
     &:hover {
         background-color: rgba(227, 80, 40, 1);
         transition: 1s;

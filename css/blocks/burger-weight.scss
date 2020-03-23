@@ -2,10 +2,24 @@
     position: absolute;
     top: 100%;
     opacity: .5;
+
+    @include tablets {
+        top: inherit;
+        bottom: 100%;
+        right: 20%
+    }
+    @include phones {
+        right: 0;
+    }
+    @include iPhone5 {
+        top: -12%;
+    }
+
+
     &__measure{
         background: url(../img/icons/kkal.svg) 50% no-repeat;
-        width: rem(65px);
-        height: rem(60px);
+        width: rem(75px);
+        height: rem(74px);
         position: relative;
     }
 

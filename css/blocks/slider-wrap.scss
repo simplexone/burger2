@@ -2,6 +2,15 @@
     &__title {
         color: white;
         margin-bottom: rem(56px);
+
+        @include phones {
+            font-size: rem(53px);
+            padding: 0 10%;
+        }
+        @include iPhone5 {
+            margin-bottom: rem(25px);
+        }
+
     }
 
     &__text {
@@ -11,16 +20,30 @@
         text-align: left;
         color: white;
         margin-bottom: rem(34px);
+
+        @include iPhone5 {
+            margin-bottom: rem(5px);
+        }
     }
+
+    
 
     &__item {
         display: flex;
         align-items: flex-end;
         position: relative;
+
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__pic {
         width: 100%;
+        @include phones {
+            padding: 0 10%;
+        }
     }
 
     &__options {
@@ -55,14 +78,40 @@
 
     &__btn_next{
         right: -2.5rem;
+        @include tablets {
+            right: 1.5rem;
+        }
+        @include iPhone5 {
+            right: 0;
+        }
     }
 
     &__btn_prev{
         left: -2.5rem;
+        @include tablets {
+            left: 1.5rem;
+        }
+        @include iPhone5 {
+            left: -0.2rem;
+        }
     }
 
     &__button {
         margin-left: rem(29px);
+    }
+
+    &__right {
+        @include tablets {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 rem(110px);
+        }
+
+        @include phones {
+            padding: 0 rem(10px);
+        }
     }
 }
 

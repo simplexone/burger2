@@ -1,0 +1,74 @@
+.overlay {
+    position: fixed;
+    background: #2e3133;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden; 
+    z-index: 10;
+}
+    
+    .overlay.overlay--open {
+      opacity: .99;
+      visibility: visible;
+      height: 100%; }
+      .overlay.overlay--open .overlay-menu__item {
+        animation: fadeInRight .5s ease forwards;
+        animation-delay: .35s; 
+  }
+  
+  .overlay-menu {
+    position: absolute;
+    height: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: rem(50px);
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
+    text-align: center; 
+  }
+  
+  
+  .overlay-menu__item {
+    display: block;
+    position: relative;
+    line-height: 1;
+    opacity: 0; }
+    .overlay-menu__item:after {
+      display: inline-block;
+      vertical-align: middle;
+      content: ' ';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #fff; }
+    .overlay-menu__item:last-child:after {
+      display: none; 
+  }
+  
+  .overlay-menu__link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: rem(24px); 
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%; }
+    100% {
+      opacity: 1;
+      left: 0; } 
+    }
+
+.body-active-menu {
+    overflow: hidden; 
+}
+  

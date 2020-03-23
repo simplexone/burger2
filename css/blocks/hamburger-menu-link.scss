@@ -1,21 +1,29 @@
 .hamburger-menu-link {
 	vertical-align: middle;
 	position: relative;
-	height: rem(22px);
+	height: rem(19px);
 	align-items: center;
 	margin-left: rem(30px);
 	display: none;
+	z-index: 20;
+	position: relative;
 
 	@include tablets {
 		display: inline-flex;
 	}
 }
 
+
+.hamburger-menu_hidden{
+	visibility: hidden;
+	
+}
+
 .hamburger-menu-link__bars {
 	&, &:before, &:after {
 		background: #fff;
 		width: rem(24px);
-		height: rem(5px);
+		height: rem(4px);
 		border-radius: rem(3px);
 	}
 
