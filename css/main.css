@@ -730,8 +730,8 @@ img {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 3.125rem;
-  font-family: "Vollkorn", serif;
-  font-weight: 400;
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
   text-align: center;
 }
 
@@ -1037,7 +1037,7 @@ img {
 
 .burger-weight {
   position: absolute;
-  top: 100%;
+  top: 76%;
   opacity: 0.5;
 }
 @media screen and (max-width: 768px) {
@@ -1079,6 +1079,15 @@ img {
   font-size: 0.875rem;
 }
 
+.slider__list {
+  display: flex;
+  left: 0%;
+  transition: transform 0.3s;
+  position: relative;
+}
+.slider-wrap {
+  overflow: hidden;
+}
 .slider__title {
   color: white;
   margin-bottom: 3.5rem;
@@ -1111,6 +1120,8 @@ img {
   display: flex;
   align-items: flex-end;
   position: relative;
+  width: 100%;
+  flex-shrink: 0;
 }
 @media screen and (max-width: 768px) {
   .slider__item {
@@ -1119,7 +1130,7 @@ img {
   }
 }
 .slider__pic {
-  width: 100%;
+  max-width: 100%;
 }
 @media screen and (max-width: 480px) {
   .slider__pic {
@@ -1262,6 +1273,7 @@ img {
 @media screen and (max-width: 768px) {
   .team-acco__trigger {
     display: inline-flex;
+    font-size: 1.5625rem;
   }
 }
 .team-acco__trigger:before {
@@ -1272,6 +1284,11 @@ img {
   top: 0.5rem;
   width: 0;
   height: 0;
+}
+@media screen and (max-width: 768px) {
+  .team-acco__trigger:before {
+    top: 0.875rem;
+  }
 }
 .team-acco__trigger:before {
   border-top: 0.4375rem solid #f9b43b;
@@ -1337,39 +1354,49 @@ img {
   right: 0;
   top: 0;
   bottom: 0;
+  display: flex;
+  z-index: 1;
+  justify-content: flex-end;
 }
-
-.menu-acco__item {
-  float: left;
-  height: 100%;
+@media screen and (max-width: 480px) {
+  .menu-acco__item.is-active {
+    flex-shrink: 0;
+    order: 1;
+    width: 100%;
+  }
 }
 .menu-acco__item.is-active .menu-acco__trigger-text {
   color: #f9b43b;
 }
 .menu-acco__item.is-active .menu-acco__content {
-  width: 33.75rem;
+  transition: width 0.4s, color 0.4s 0.4s;
+  color: #fff;
   overflow: initial;
   padding: 3.75rem 1.875rem;
 }
-@media screen and (max-width: 768px) {
-  .menu-acco__item.is-active .menu-acco__content {
-    width: 31.9375rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .menu-acco__item.is-active .menu-acco__content {
-    width: 19.0625rem;
-  }
-}
 @media screen and (max-width: 320px) {
   .menu-acco__item.is-active .menu-acco__content {
-    width: 13.75rem;
     padding: 10% 5%;
   }
 }
 .menu-acco__item.is-active .menu-acco__text {
-  width: 100%;
   display: initial;
+}
+.menu-acco__content {
+  height: 100%;
+  background: rgba(47, 50, 52, 0.93);
+  width: 0;
+  overflow: hidden;
+  transition: width 0.4s;
+}
+.menu-acco__text {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: #fff;
+  width: 100%;
+  line-height: 1.8;
+  display: none;
 }
 
 .menu-acco__trigger {
@@ -1401,24 +1428,6 @@ img {
   left: 50%;
   top: 100%;
   margin-top: -1.25rem;
-}
-
-.menu-acco__content {
-  height: 100%;
-  float: left;
-  background: rgba(47, 50, 52, 0.93);
-  width: 0;
-  overflow: hidden;
-}
-
-.menu-acco__text {
-  font-family: "Ubuntu", Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 0.875rem;
-  color: #fff;
-  width: 100%;
-  line-height: 1.8;
-  display: none;
 }
 
 .reviews {

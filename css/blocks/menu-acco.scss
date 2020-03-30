@@ -3,44 +3,85 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
+
+	display: flex;
+    z-index: 1;
+    justify-content: flex-end;
+
 	@extend %clearfix;
-}
 
-.menu-acco__item {
-	float: left;
-	height: 100%;
 
-	&.is-active {
-		.menu-acco__trigger-text {
-			color: $yellow;
-        }
-        
-        .menu-acco__content {
-            width: rem(540px);
-            overflow: initial;
-			padding: rem(60px) rem(30px);
-			
-			@include tablets {
-				width: rem(511px);
-			}
-			
+	&__item {
+		// float: left;
+		// height: 100%;
+		
+	
+		&.is-active {
 			@include phones {
-				width: rem(305px);
+				flex-shrink: 0;
+				order: 1;
+				width: 100%;
+			}
+	
+			.menu-acco__trigger-text {
+				color: $yellow;
 			}
 			
-			@include iPhone5 {
-				width: rem(220px);
-				padding: 10% 5%;
+			.menu-acco__content {
+				transition: width .4s, color .4s .4s;
+				color: #fff;
+	
+				overflow: initial;
+				padding: rem(60px) rem(30px);
+				
+				
+				// @include tablets {
+				// 	width: rem(511px);
+				// }
+				
+				// @include phones {
+				// 	width: rem(305px);
+				// }
+				
+				@include iPhone5 {
+					// width: rem(220px);
+					padding: 10% 5%;
+				}
+				
 			}
-        }
+	
+			.menu-acco__text {
+				// width: 100%;
+				display: initial;
+				// color: #fff;
+				// transition: color .4s;
+			
+			}
+		}
+	}
 
-        .menu-acco__text {
-            width: 100%;
-            display: initial;
-        
-        }
+
+	&__content {
+		height: 100%;
+		// float: left;
+		background: rgba(#2f3234, .93);
+		width: 0;
+		overflow: hidden;
+		transition: width .4s;
+		// color: ;
+	}
+
+	&__text {
+		@include ubuntu(light);
+		font-size: rem(14px);
+		color: #fff;
+		width: 100%;
+		line-height: 1.8;
+		display: none;
 	}
 }
+
+
 
 .menu-acco__trigger {
 	width: rem(80px);
@@ -72,20 +113,5 @@
 
 }
 
-.menu-acco__content {
-	height: 100%;
-	float: left;
-	background: rgba(#2f3234, .93);
-	width: 0;
-	overflow: hidden;
-}
 
-.menu-acco__text {
-	@include ubuntu(light);
-	font-size: rem(14px);
-	color: #fff;
-	width: 100%;
-    line-height: 1.8;
-    display: none;
 
-}

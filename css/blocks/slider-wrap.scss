@@ -1,4 +1,16 @@
 .slider {
+    &__list {
+        display: flex;
+        left: 0%;
+        transition: transform .3s;
+        position: relative;
+    }
+
+    &-wrap {
+        overflow: hidden;
+        // margin-bottom: 50px;
+    }
+
     &__title {
         color: white;
         margin-bottom: rem(56px);
@@ -32,6 +44,8 @@
         display: flex;
         align-items: flex-end;
         position: relative;
+        width: 100%;
+        flex-shrink: 0;
 
         @include tablets {
             flex-direction: column;
@@ -40,7 +54,7 @@
     }
 
     &__pic {
-        width: 100%;
+        max-width: 100%;
         @include phones {
             padding: 0 10%;
         }

@@ -63,6 +63,7 @@
 
         @include tablets {
             display: inline-flex;
+            font-size: rem(25px);
         }
         
         &:before  {
@@ -73,6 +74,9 @@
             top: rem(8px);
             width: 0;
             height: 0;
+            @include tablets {
+                top: rem(14px);
+            }
         }
     
         &:before {
