@@ -9,6 +9,8 @@
 
     &-acco__item {
         margin-bottom: rem(40px);
+        overflow: hidden;
+        padding-left: 1.3125rem;
         
           &:last-child {
               margin-bottom: 0;
@@ -23,8 +25,8 @@
                   }
               }
               .team-acco__content {
-                  height: 100%;
                   overflow: initial;
+                  transition: height .5s;
 
                   @include tablets {
                       flex-direction: column;
@@ -96,11 +98,11 @@
         display: flex;
         height: 0;
         overflow: hidden;
+        transition: .5s;
     }
 
     &-acco__pic {
         text-align: center;
-        // width: 30%;
         margin-right: rem(21px);
         
         @include tablets {

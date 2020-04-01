@@ -13,15 +13,14 @@
     align-items: center;
 
     @include tablets {
-        top: inherit;
-        bottom: 100%;
+        top: 0;
         left: 20%;
     }
     @include phones {
         left: 0;
     }
     @include iPhone5 {
-        top: -12%;
+        top: 0;
     }
     
 

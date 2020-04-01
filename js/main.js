@@ -44,8 +44,8 @@ let teamAccoTeam = () => {
       if(!active || active.querySelector(".team-acco__trigger") !== link){
         let current = link.closest(".team-acco__item");
         current.classList.add("is-active");
-        let cerrentText = current.querySelector(".team-acco__content");
-        cerrentText.style.height = cerrentText.scrollHeight + "px";
+        let currentText = current.querySelector(".team-acco__content");
+        currentText.style.height = currentText.scrollHeight + "px";
       }
     }
   }) 
@@ -113,12 +113,15 @@ const slide = (function(){
   }
 
   function prev (){
-    pos == 0 ? pos = itemCount - 1: pos--;
+    pos == 0 ? pos = itemCount.length - 1 : pos--;
+    console.log(pos,itemCount);
     setTransform(300);
+    
   }
 
   function next (){
-    pos == itemCount - 1 ? pos= 0: pos++;
+    pos == itemCount.length - 1 ? pos= 0 : pos++;
+    console.log(pos,itemCount);
     setTransform(300);
   }
 

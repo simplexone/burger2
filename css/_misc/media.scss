@@ -21,7 +21,7 @@
 }
 
 @mixin iPhone6 {
-	@media screen and (max-width: 414px) {
+	@media screen and (max-width: 420px) {
 		@content;
 	}
 }

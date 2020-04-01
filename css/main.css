@@ -592,7 +592,7 @@ img {
 .section__title--white {
   color: #fff;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 420px) {
   .section__title {
     font-size: 3.4375rem;
   }
@@ -801,7 +801,7 @@ img {
   font-family: "Lifehack-Medium";
   line-height: 1.1;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 420px) {
   .hero__desc {
     font-size: 3rem;
   }
@@ -832,7 +832,7 @@ img {
     padding-top: 1.875rem;
   }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 420px) {
   .hero__text {
     margin-left: 0;
   }
@@ -972,8 +972,7 @@ img {
 }
 @media screen and (max-width: 768px) {
   .ingredients {
-    top: inherit;
-    bottom: 100%;
+    top: 0;
     left: 20%;
   }
 }
@@ -984,7 +983,7 @@ img {
 }
 @media screen and (max-width: 320px) {
   .ingredients {
-    top: -12%;
+    top: 0;
   }
 }
 .ingredients:hover {
@@ -1037,13 +1036,12 @@ img {
 
 .burger-weight {
   position: absolute;
-  top: 76%;
+  top: 80%;
   opacity: 0.5;
 }
 @media screen and (max-width: 768px) {
   .burger-weight {
-    top: inherit;
-    bottom: 100%;
+    top: 0;
     right: 20%;
   }
 }
@@ -1054,7 +1052,7 @@ img {
 }
 @media screen and (max-width: 320px) {
   .burger-weight {
-    top: -12%;
+    top: 0;
   }
 }
 .burger-weight__measure {
@@ -1111,6 +1109,11 @@ img {
   color: white;
   margin-bottom: 2.125rem;
 }
+@media screen and (max-width: 768px) {
+  .slider__text {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 320px) {
   .slider__text {
     margin-bottom: 0.3125rem;
@@ -1122,11 +1125,24 @@ img {
   position: relative;
   width: 100%;
   flex-shrink: 0;
+  padding-bottom: 5rem;
 }
 @media screen and (max-width: 768px) {
   .slider__item {
     flex-direction: column;
     align-items: center;
+    padding-top: 5rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .slider__item {
+    padding-bottom: 0;
+    padding-top: 6.875rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .slider__item {
+    padding-top: 2.875rem;
   }
 }
 .slider__pic {
@@ -1191,6 +1207,9 @@ img {
 .slider__button {
   margin-left: 1.8125rem;
 }
+.slider__right {
+  width: 100%;
+}
 @media screen and (max-width: 768px) {
   .slider__right {
     align-items: center;
@@ -1222,6 +1241,8 @@ img {
 }
 .team-acco__item {
   margin-bottom: 2.5rem;
+  overflow: hidden;
+  padding-left: 1.3125rem;
 }
 .team-acco__item:last-child {
   margin-bottom: 0;
@@ -1233,8 +1254,8 @@ img {
   transform: rotate(-180deg);
 }
 .team-acco__item.is-active .team-acco__content {
-  height: 100%;
   overflow: initial;
+  transition: height 0.5s;
 }
 @media screen and (max-width: 768px) {
   .team-acco__item.is-active .team-acco__content {
@@ -1265,7 +1286,7 @@ img {
   display: block;
   margin-bottom: 1.0625rem;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 420px) {
   .team-acco__trigger {
     font-size: 1.275rem;
   }
@@ -1302,6 +1323,7 @@ img {
   display: flex;
   height: 0;
   overflow: hidden;
+  transition: 0.5s;
 }
 .team-acco__pic {
   text-align: center;
@@ -1358,6 +1380,9 @@ img {
   z-index: 1;
   justify-content: flex-end;
 }
+.menu-acco__item {
+  display: flex;
+}
 @media screen and (max-width: 480px) {
   .menu-acco__item.is-active {
     flex-shrink: 0;
@@ -1369,18 +1394,14 @@ img {
   color: #f9b43b;
 }
 .menu-acco__item.is-active .menu-acco__content {
-  transition: width 0.4s, color 0.4s 0.4s;
   color: #fff;
+  transition: width 0.4s, color 0.4s 0.3s;
   overflow: initial;
-  padding: 3.75rem 1.875rem;
 }
 @media screen and (max-width: 320px) {
   .menu-acco__item.is-active .menu-acco__content {
     padding: 10% 5%;
   }
-}
-.menu-acco__item.is-active .menu-acco__text {
-  display: initial;
 }
 .menu-acco__content {
   height: 100%;
@@ -1388,22 +1409,21 @@ img {
   width: 0;
   overflow: hidden;
   transition: width 0.4s;
+  color: rgba(255, 255, 255, 0);
 }
 .menu-acco__text {
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
-  color: #fff;
   width: 100%;
   line-height: 1.8;
-  display: none;
+  padding: 3.75rem 1.875rem;
 }
 
 .menu-acco__trigger {
   width: 5rem;
   display: block;
   height: 100%;
-  float: left;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

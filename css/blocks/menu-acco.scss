@@ -12,10 +12,7 @@
 
 
 	&__item {
-		// float: left;
-		// height: 100%;
-		
-	
+		display: flex;
 		&.is-active {
 			@include phones {
 				flex-shrink: 0;
@@ -28,56 +25,35 @@
 			}
 			
 			.menu-acco__content {
-				transition: width .4s, color .4s .4s;
 				color: #fff;
+				transition: width .4s, color .4s .3s;
 	
 				overflow: initial;
-				padding: rem(60px) rem(30px);
-				
-				
-				// @include tablets {
-				// 	width: rem(511px);
-				// }
-				
-				// @include phones {
-				// 	width: rem(305px);
-				// }
-				
 				@include iPhone5 {
-					// width: rem(220px);
 					padding: 10% 5%;
 				}
-				
 			}
 	
-			.menu-acco__text {
-				// width: 100%;
-				display: initial;
-				// color: #fff;
-				// transition: color .4s;
-			
-			}
 		}
 	}
 
 
 	&__content {
 		height: 100%;
-		// float: left;
 		background: rgba(#2f3234, .93);
 		width: 0;
 		overflow: hidden;
 		transition: width .4s;
-		// color: ;
+		color: rgba(255, 255, 255, 0);
+
 	}
 
 	&__text {
 		@include ubuntu(light);
 		font-size: rem(14px);
-		color: #fff;
 		width: 100%;
 		line-height: 1.8;
-		display: none;
+		padding: rem(60px) rem(30px);
 	}
 }
 
@@ -87,7 +63,6 @@
 	width: rem(80px);
 	display: block;
 	height: 100%;
-	float: left;
 	@include cover;
 	text-decoration: none;
 	position: relative;

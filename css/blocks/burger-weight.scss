@@ -1,18 +1,17 @@
 .burger-weight{
     position: absolute;
-    top: 76%;
+    top: 80%;
     opacity: .5;
 
     @include tablets {
-        top: inherit;
-        bottom: 100%;
+        top: 0;
         right: 20%
     }
     @include phones {
         right: 0;
     }
     @include iPhone5 {
-        top: -12%;
+        top: 0;
     }
 
 
