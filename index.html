@@ -693,7 +693,7 @@
                 булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
               </p>
             </div>
-            <a href="#" class="btn btn--margin0 btn--dark">Подробнее</a>
+            <a href="#" class="btn btn--margin0 btn--dark overlay-btn" id="review-btn">Подробнее</a>
           </div>
         </li>
       </ul>
@@ -702,16 +702,18 @@
     <section class="section order-section">
       <div class="container">
         <h2 class="section__title section__title--centered">Закажите доставку</h2>
-        <form class="order">
+        <form class="order" id="order">
           <div class="order__left">
             <div class="order__row">
               <label class="order__block">
-                <div class="order__title">Имя</div>
-                <input type="text" class="order__input">
+                <div class="order__title" >Имя</div>
+                <input type="text" name='name' class="order__input" required>
+                <div class="error"></div>
               </label>
               <label class="order__block">
                 <div class="order__title">Тлефон</div>
-                <input type="text" class="order__input">
+                <input type="text" name="phone" class="order__input" required>
+                <div class="error"></div>
               </label>
             </div>
             <div class="order__row">
@@ -743,19 +745,20 @@
             <div class="order__row ">
               <label class="order__block">
                 <div class="order__title">Коментарий</div>
-                <textarea class="order__input order__input--textarea"></textarea>
+                <textarea class="order__input order__input--textarea" name="comment" required></textarea>
+                <div class="error"></div>
               </label>
             </div>
             <div class="order__buttons-row">
               <div class="switch-controls">
-                <div class="switch-controls__buttons">
+                <div class="switch-controls__buttons" name='switch'>
                   <label class="switch-controls__elem">
-                    <input type="radio" name="choise"  class="switch-controls__radio">
+                    <input type="radio" name="choise" value="1" class="switch-controls__radio">
                     <div class="switch-controls__radio-fake"></div>
                     <div class="switch-controls__elem-title">Потребуеться сдача</div>
                   </label>
                   <label class="switch-controls__elem">
-                    <input type="radio" name="choise"  class="switch-controls__radio">
+                    <input type="radio" name="choise" value="2" class="switch-controls__radio">
                     <span class="switch-controls__radio-fake"></span>
                     <div class="switch-controls__elem-title">Оплата по карте</div>
                   </label>
@@ -772,7 +775,7 @@
               </div>
             </div>
             <div class="order__btns">
-              <input class="order__form-button" name="" type="submit" value="Заказать">
+              <input class="order__form-button" id="orderBtn" name="" type="submit" value="Заказать">
               <input class="order__form-button order__form-button_reset" name="" type="reset" value="Очистить">
             </div>
           </div >
@@ -824,7 +827,34 @@
         </div>
       </footer>
     </section>
+    
   </div>
+  <script type="template" id="overlayTemplate">
+    <div class="overlay-modal">
+      <div class="overlay-wrapper">
+        <a class="overlay-modal__close" href="#">x</a>
+        <div class="overlay-modal__content">
+          <div class="overlay-modal__title">Константин Спилберг</div>
+          <p>Мысли все о них и о них, о них и о них. Нельзя устоять,
+             невозможно забыть... Никогда не думал, что булочки могут 
+             быть такими мягкими, котлетка такой сочной, а сыр таким 
+             расплавленным. Мысли все о них и о них, о них и о них. 
+             Нельзя устоять, невозможно забыть... Никогда не думал, 
+             что булочки могут быть такими мягкими, котлетка такой сочной, 
+             а сыр таким расплавленным.
+          </p>
+        </div>
+      </div>
+    </div>
+  </script>
+  <script type="template" id="reviewTemplate">
+    <div class="overlay-modal">
+      <div class="overlay-wrapper">
+        <a class="overlay-modal__close" href="#">x</a>
+        <div class="overlay-modal__content"></div>
+      </div>
+    </div>
+  </script>
   <script src="./js/main.js"></script>
 </body>
 

@@ -93,32 +93,8 @@
   }
 }
 
-// .order__radio-title {
-//   @include inlineblock(middle);
-//   font-size: rem(14px);
-//   color: #fff;
-//   margin-left: rem(10px);
-// }
 
-// .order__radio_checkbox {
-//   .order__radio-fake {
-//     border-radius: rem(0px);
-//   }
-//   .order__radio-elem {
-//     &+.order__radio-fake {
-//       &:after {
-//         background: transparent;
-//       }
-//     }
-//   }
-//   .order__radio-elem:checked {
-//     &+.order__radio-fake {
-//       &:after {
-//         background: url("../../img/icons/check.png");
-//         background-size: contain;
-//         width: rem(11px);
-//         height: rem(9px);
-//       }
-//     }
-//   }
-// }
+.error {
+  color: red;
+  font-size: 15px;
+}

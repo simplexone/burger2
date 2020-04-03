@@ -1,0 +1,50 @@
+.overlay-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0005;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.overlay-modal__title {
+  font-family: 'Gagalin';
+  font-size: 0.875rem;
+  line-height: 2;
+  text-align: left;
+  color: #2f3234;
+  margin-bottom: 1.25rem;
+}
+
+.overlay-wrapper {
+  position: relative;
+}
+
+.overlay-modal__content {
+  width: 31.25rem;
+  background: #fff;
+  border-radius: 5px;
+  padding: rem(20px);
+
+  font-family: 'Ubuntu';
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.71;
+  text-align: left;
+  color: #2f3234;
+}
+
+.overlay-modal__close {
+  font: 25px Helvetica, sans-serif;
+  color: #e45028;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+}
