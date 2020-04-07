@@ -239,3 +239,58 @@ function validateOrder(field){
   field.nextElementSibling.textContent = field.validationMessage;
   return field.checkValidity();
 }
+
+////////////////////////////////////// YMap
+
+ymaps.ready(init);
+
+let placemarks = [
+  {
+    latitude: 59.90206953, 
+    longitude: 30.29132307,
+    hintContent: 'Лучшие бургеры только по этому адресу',
+    ballonContent: 'это балун'
+  },
+  {
+    latitude: 59.96022496,
+    longitude: 30.29117468,
+    hintContent: 'Лучшие бургеры только по этому адресу',
+    ballonContent: 'это балун'
+  },
+  {
+    latitude: 59.97100874,
+    longitude: 30.34763114,
+    hintContent: 'Лучшие бургеры только по этому адресу',
+    ballonContent: 'это балун'
+  },
+  {
+    latitude: 59.92869803, 
+    longitude: 30.41332978,
+    hintContent: 'Лучшие бургеры только по этому адресу',
+    ballonContent: 'это балун'
+  }
+];
+
+
+function init(){
+  let map = new ymaps.Map('map', {
+    center: [59.93442889, 30.32332694],
+    zoom: 12,
+    controls: ['zoomControl'],
+    behaviors: ['drag']
+  });
+
+  placemarks.forEach(function (obj){
+      let placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
+      hintContent: obj.hintContent,
+      ballonContent: obj.ballonContent
+    },
+    {
+      iconLayout:'default#image',
+      iconImageHref: 'img/icons/map-marker.svg',
+      iconImageSize: [50,50],
+      iconImageOffset: [-25,-50]
+    });
+    map.geoObjects.add(placemark);
+  });
+}
