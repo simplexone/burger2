@@ -390,3 +390,97 @@ if (isMobile) {
   });
 }
 
+//////////// Video player
+let video;
+let durationConrol;
+let soundConrol;
+let intervalId;
+const MAX_SOUND_VALUE = 10;
+const NORMAL_UPDATE_RANGE = 1000/66;
+
+$().ready (function() {
+
+    video = document.getElementById('player');
+    video.addEventListener('click', playStop);
+
+    let playButtons = document.querySelectorAll('.play');
+    for (let i = 0; i < playButtons.length; i ++){
+      playButtons[i].addEventListener('click', function(e){
+        e.preventDefault();
+        playStop();
+      } );
+    }
+
+    let micControl = document.getElementById('mic');
+    micControl.addEventListener('click', function(e){
+      e.preventDefault();
+      soundOf();
+    })
+
+    durationConrol = document.getElementById('playerLevel');
+    durationConrol.addEventListener('mousedown', stopInterval);
+    durationConrol.addEventListener('mouseup', setVideoDuration);
+
+    durationConrol.min = 0;
+    durationConrol.max = 0;
+
+    soundConrol = document.getElementById('micLevel');
+    soundConrol.addEventListener('mouseup', changeSoundVolume);
+
+    soundConrol.min = 0;
+    soundConrol.max = MAX_SOUND_VALUE;
+
+    video.addEventListener('ended', function(e) {
+      e.preventDefault();
+      document.querySelector('.player__play-video-link').classList.toggle('player__play-video-link--hidden');
+      video.currentTime = 0
+    }, false); 
+});
+
+function playStop (){
+  document.querySelector('.player__play-video-link').classList.toggle('player__play-video-link--hidden');
+  durationConrol.max = video.duration;
+
+  if ( video.paused){
+    video.play();
+    intervalId = setInterval(updateDuration, NORMAL_UPDATE_RANGE);
+  } else {
+    stopInterval();
+  }
+}
+
+function stopInterval (){
+  video.pause();
+  clearInterval(intervalId);
+}
+
+function setVideoDuration(){
+
+  video.currentTime = durationConrol.value;
+  intervalId = setInterval(updateDuration, NORMAL_UPDATE_RANGE);
+
+  if (video.paused){
+    video.play();
+    document.getElementsByClassName('player__play-video-link')[0].classList.add('player__play-video-link--hidden');
+  }
+}
+
+function updateDuration(){
+  durationConrol.value = video.currentTime;
+}
+
+function soundOf(){
+  if (video.volume === 0) {
+    video.volume = soundLevel;
+    soundConrol.value = soundLevel*MAX_SOUND_VALUE;
+  } else {
+    soundLevel = video.volume;
+    video.volume = 0;
+    soundConrol.value = 0;
+  }
+}
+
+
+function changeSoundVolume(){
+  video.volume = soundConrol.value/MAX_SOUND_VALUE;
+}

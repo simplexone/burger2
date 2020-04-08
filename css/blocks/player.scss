@@ -1,0 +1,75 @@
+
+
+.player__wrapper{
+  position: relative;
+}
+
+#player {
+  width: 100%;
+  object-fit: cover;
+}
+
+.player__controls {
+  margin-top: rem(-6px);
+  height: 35px;
+  background: #3e3e3e;
+  display: flex;
+}
+
+.player__duration {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.player__play-video-link{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.player__lenght{
+  width: 100%;
+  height: 4px;
+  border-radius: 1px;
+  background-color: #626262;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  &::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    background: #626262;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+}
+
+.player__sound{
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.player__play-link{
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.player__volume{
+  width: rem(60px);
+  margin-left: 10px;
+  margin-top: -7px;
+}
+
+.player__play-video-link--hidden {
+  opacity: 0;
+}
+
+// .player__mic-link{
+//   cursor: pointer;
+// }

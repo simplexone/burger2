@@ -1,0 +1,23 @@
+.video {
+  background: url('../img/bg/video.png') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  & .section__title{
+    @include iPhone6 {
+      padding: 0 60px;
+    }
+  }
+  
+}
+
+.video__container {
+    text-align: center; 
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @include tablets {
+      width: 85%;
+    }
+  }

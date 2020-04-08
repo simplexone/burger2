@@ -13,7 +13,7 @@
 <body>
   <div class="wrapper">
     <div class="maincontent">
-      <section class="section section--align--top hero is-active">
+    <section class="section section--align--top hero is-active">
       <div class="container hero__container">
         <header class="header">
           <img class="logo" src="./img/icons/logo.svg" alt="mr burger logo">
@@ -702,6 +702,36 @@
       </ul>
     </section>
 
+    <section class="section video">        
+      <h2 class="section__title section__title--color--black section__title--centered">Как мы работаем</h2>
+      <div class="video__container">
+          <div class="player__wrapper">
+            <video id="player" poster="./img/bg/player-splash.png">
+              <source src="./video/15708.mp4" type="video/mp4">
+            </video>
+            <a href="#" class="player__play-video-link play">
+              <img src="./img/icons/play.png" alt="" class="player__play-video-img ">
+            </a>
+          </div>
+          <div class="player__controls">
+            <div class="player__duration">
+              <a href="#" class="player__play-link play">
+                <img src="./img/icons/player-play.png" alt="" class="player__play-img ">
+              </a>
+              <input type="range" class="player__lenght" id="playerLevel" min="0">
+            </div>
+            <div class="player__sound">
+              <a href="#" class="player__mic-link" id="mic">
+                <img src="./img/icons/volum.png" alt=""  class="player__mic-img">
+              </a>
+              <div class="player__volume">
+                <input type="range" class="player__lenght player__lenght--mic" id="micLevel" min="0" >
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
     <section class="section order-section">
       <div class="container">
         <h2 class="section__title section__title--centered">Закажите доставку</h2>
@@ -889,6 +919,7 @@
       </div>
     </div>
   </script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
