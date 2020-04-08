@@ -1,3 +1,4 @@
+//////////Оверлей меню
 let menuOpenBurger = (function (options) {
   let button = document.querySelector(options.button);
   let hidden = document.querySelector(options.hidden);
@@ -27,7 +28,7 @@ let menuOpenBurger = (function (options) {
 });
 menuOpenBurger.openMenu();
 
-
+/////////Команда аккордион
 let teamAccoTeam = () => {
   let team = document.querySelector(".team-acco");
   team.addEventListener("click", function(e) {
@@ -52,7 +53,7 @@ let teamAccoTeam = () => {
 }
 teamAccoTeam();
 
-
+/////////////Меню аккордион
 let teamAccoMenu = () => {
   let links = document.querySelectorAll(".menu-acco__trigger");
   let body = document.querySelector('body');
@@ -94,6 +95,8 @@ let teamAccoMenu = () => {
 }
 teamAccoMenu();
 
+
+///////////Слайдер
 const slide = (function(){
   const left = document.querySelector('.slider__btn_prev'); 
   const right = document.querySelector('.slider__btn_next'); 
@@ -114,14 +117,12 @@ const slide = (function(){
 
   function prev (){
     pos == 0 ? pos = itemCount.length - 1 : pos--;
-    console.log(pos,itemCount);
     setTransform(300);
     
   }
 
   function next (){
     pos == itemCount.length - 1 ? pos= 0 : pos++;
-    console.log(pos,itemCount);
     setTransform(300);
   }
 
@@ -145,8 +146,7 @@ const slide = (function(){
 })();
 slide.init();
 
-///////////////////////////////////////////////////////////////////////////////
-
+///////////Оверлей
 // let overlayBtn = (function () {
   const openButton = document.querySelector("#review-btn");
   const bodyOverlay = document.querySelector("body");
@@ -194,7 +194,7 @@ slide.init();
 // overlayBtn();
 
 
-
+///////////Отправка формы
 const  orderForm = document.querySelector("#order");
 const  orderButton = document.querySelector('#orderBtn');
 
@@ -216,6 +216,8 @@ orderButton.addEventListener('click', function(e){
     });
   }
 });
+
+//////////Валидация формы
 
 function validateForm(orderForm) {
   let valid = true;
@@ -240,7 +242,7 @@ function validateOrder(field){
   return field.checkValidity();
 }
 
-////////////////////////////////////// YMap
+////////// YMap
 
 ymaps.ready(init);
 
@@ -294,3 +296,97 @@ function init(){
     map.geoObjects.add(placemark);
   });
 }
+
+//////////OnePageScroll
+const sections = $('.section');
+const display = $('.maincontent');
+let inScroll = false;
+
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+const trasitionOver = 1000; //время смены секции 
+
+const performTransition = sectionEq => {
+  if(inScroll === false){
+    inScroll = true;
+    const position = sectionEq*-100;
+
+    sections.eq(sectionEq).addClass('is-active').siblings().removeClass('is-active');
+
+    display.css({
+      transform: `translateY(${position}%)`
+    });
+
+   setTimeout(() => {
+    $('.fixed-menu__item').eq(sectionEq).addClass('is-active').siblings().removeClass('is-active');
+    inScroll = false;
+   }, trasitionOver) 
+  }
+  
+}
+
+const scrollSection = direction => {
+  const activeSection = sections.filter('.is-active');
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  if(nextSection.length && direction ==='next'){
+    performTransition(nextSection.index());
+  }
+
+  if(prevSection.length &&  direction ==='prev'){
+    performTransition(prevSection.index());
+  }
+}
+
+$(window).on('wheel', e =>{
+  const deltaY = e.originalEvent.deltaY;
+
+  if(deltaY > 0){
+    scrollSection('next');
+    
+  }
+
+  if(deltaY < 0){
+    scrollSection('prev');
+  }
+});
+
+$(document).on('keydown', e => {
+  const tagName = e.target.tagName.toLowerCase();
+
+  if(tagName !== 'input' && tagName !== 'textarea'){
+    switch (e.keyCode) {
+      case 38:
+        scrollSection('prev');
+        break;
+      case 40:
+        scrollSection('next');
+        break;
+    }
+  }
+})
+
+$("[data-scroll-to]").on("click", (e) => {
+  e.preventDefault();
+
+  const $this = $(e.currentTarget);
+  const target = $this.attr("data-scroll-to");
+
+  performTransition(target);
+});
+
+if (isMobile) {
+  $("body").swipe({
+    swipe: (event, direction) => {
+      let scrollDirection;
+
+      if (direction === "up") scrollDirection = "next";
+      if (direction === "down") scrollDirection = "prev";
+
+      scrollSection(scrollDirection);
+    }
+  });
+}
+
