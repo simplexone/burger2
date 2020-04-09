@@ -1262,14 +1262,6 @@ img {
   overflow: initial;
   transition: height 0.5s;
 }
-@media screen and (max-width: 768px) {
-  .team-acco__item.is-active .team-acco__content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 24%;
-  }
-}
 .team__section {
   width: 50%;
   height: 100%;
@@ -1329,6 +1321,14 @@ img {
   height: 0;
   overflow: hidden;
   transition: 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .team-acco__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 24%;
+  }
 }
 .team-acco__pic {
   text-align: center;
@@ -1400,7 +1400,7 @@ img {
 }
 .menu-acco__item.is-active .menu-acco__content {
   color: #fff;
-  transition: width 0.4s, color 0.4s 0.3s;
+  transition: color 0.4s 0.3s;
   overflow: initial;
 }
 @media screen and (max-width: 320px) {
@@ -1413,7 +1413,6 @@ img {
   background: rgba(47, 50, 52, 0.93);
   width: 0;
   overflow: hidden;
-  transition: width 0.4s;
   color: rgba(255, 255, 255, 0);
 }
 .menu-acco__text {
@@ -1971,7 +1970,6 @@ img {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  cursor: pointer;
 }
 
 .player__lenght {
@@ -1988,7 +1986,6 @@ img {
   appearance: none;
   -webkit-appearance: none;
   background: #626262;
-  cursor: pointer;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -2002,7 +1999,6 @@ img {
 
 .player__play-link {
   padding: 5px 20px;
-  cursor: pointer;
 }
 
 .player__volume {

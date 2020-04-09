@@ -147,15 +147,16 @@ const slide = (function(){
 slide.init();
 
 ///////////Оверлей
-// let overlayBtn = (function () {
-  const openButton = document.querySelector("#review-btn");
+  const openButton = document.querySelector(".reviews__list");
   const bodyOverlay = document.querySelector("body");
   const template = document.querySelector("#overlayTemplate").innerHTML;
   const overlay = createOverlay(template);
   openButton.addEventListener("click", function(e) {
     e.preventDefault();
-    overlay.open();
-    bodyOverlay.classList.add('body-active-menu'); 
+    if(e.target.classList.contains('overlay-btn')){
+      overlay.open();
+      bodyOverlay.classList.add('body-active-menu'); 
+    }
   });
 
   function createOverlay(template) {
@@ -186,12 +187,10 @@ slide.init();
         closeElement.click();
       },
       setContent(content) {
-        contentElement.innerHTML = content;
+        contentElement.textContent = content;
       }
     };
   }
-// })();
-// overlayBtn();
 
 
 ///////////Отправка формы
@@ -212,7 +211,11 @@ orderButton.addEventListener('click', function(e){
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
     xhr.send(JSON.stringify(data));
     xhr.addEventListener('load', () => {
-        console.log(xhr.response.message);
+      const templateForm = document.querySelector("#templateForm").innerHTML;
+      const overlayForm = createOverlay(templateForm);
+      overlayForm.open();
+      const addContent = document.querySelector(".overlay-modal__content");
+      addContent.textContent = xhr.response.message;
     });
   }
 });
@@ -480,7 +483,8 @@ function soundOf(){
   }
 }
 
-
 function changeSoundVolume(){
   video.volume = soundConrol.value/MAX_SOUND_VALUE;
 }
+
+

@@ -26,12 +26,13 @@
 			
 			.menu-acco__content {
 				color: #fff;
-				transition: width .4s, color .4s .3s;
-	
+				transition: color .4s .3s;
 				overflow: initial;
+
 				@include iPhone5 {
 					padding: 10% 5%;
 				}
+
 			}
 	
 		}
@@ -43,8 +44,8 @@
 		background: rgba(#2f3234, .93);
 		width: 0;
 		overflow: hidden;
-		transition: width .4s;
 		color: rgba(255, 255, 255, 0);
+
 
 	}
 
