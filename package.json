@@ -1,0 +1,31 @@
+{
+  "name": "burger-prepros",
+  "version": "1.0.0",
+  "description": "ФИО: Антон Годоваников *\r Наставник: Максим Иванов\r Название курса: ВЕБ ДЛЯ НАЧИНАЮЩИХ",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplexone/burger2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simplexone/burger2/issues"
+  },
+  "homepage": "https://github.com/simplexone/burger2#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^2.0.0",
+    "node-sass": "^4.13.1"
+  }
+}
