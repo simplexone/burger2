@@ -5,6 +5,8 @@ let menuOpenBurger = (function (options) {
   let cross = document.querySelector(options.cross);
   let menu = document.querySelector(options.menu);
   let body = document.querySelector('body');
+  
+
   let _toggleMenu = function (e) {
     hidden.classList.toggle('hamburger-menu_hidden');
     cross.classList.toggle('cross_visible');
@@ -15,6 +17,8 @@ let menuOpenBurger = (function (options) {
   let addListeners = function () {
     button.addEventListener('click', _toggleMenu);
   }
+
+  
 
   return {
     openMenu: addListeners,
@@ -487,4 +491,18 @@ function changeSoundVolume(){
   video.volume = soundConrol.value/MAX_SOUND_VALUE;
 }
 
+
+let ingredients = () => {
+  let ingredients = document.querySelector(".ingredients");
+  let ingredientsClose = document.querySelector(".ingredients__cross");
+
+  ingredients.addEventListener("click", () => {
+    ingredients.classList.toggle('is-active');
+  });
+
+  ingredientsClose.addEventListener("click", () => {
+    ingredients.classList.remove('is-active');
+  });
+}
+ingredients();
 

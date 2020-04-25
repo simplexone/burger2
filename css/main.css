@@ -991,11 +991,11 @@ img {
     top: 0;
   }
 }
-.ingredients:hover {
+.ingredients.is-active {
   background-color: #e35028;
   transition: 1s;
 }
-.ingredients:hover .ingredients__dropdown {
+.ingredients.is-active .ingredients__dropdown {
   left: 100%;
   opacity: 1;
   transition: opacity 0.7s;
@@ -1017,7 +1017,7 @@ img {
   margin-left: auto;
 }
 .ingredients__icon-text {
-  font-family: "Gagalin";
+  font-family: "Gagalin-Regular", Helvetica, sans-serif;
   font-size: 14px;
   color: white;
 }
@@ -1032,6 +1032,25 @@ img {
   transition: opacity 0.3s;
   z-index: 10;
   top: 0;
+}
+@media screen and (max-width: 480px) {
+  .ingredients__dropdown {
+    width: 18.75rem;
+    padding-right: 4.0625rem;
+  }
+}
+.ingredients__cross {
+  position: absolute;
+  top: 2%;
+  left: 90%;
+  opacity: 0%;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .ingredients__cross {
+    left: 84%;
+    opacity: 100%;
+  }
 }
 .ingredients__row {
   display: flex;
